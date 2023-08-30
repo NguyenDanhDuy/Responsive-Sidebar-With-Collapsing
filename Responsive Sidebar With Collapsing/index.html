@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Responsive Sidebar</title>
+  <!-- Link Styles -->
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script src="https://kit.fontawesome.com/a2191757a4.js" crossorigin="anonymous"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+</head>
+
+<body>
+  <div class="sidebar">
+    <div class="logo_details">
+      <i class="bx bxl-audible icon"></i>
+      <div class="logo_name">Smart Home</div>
+      <i class="bx bx-menu" id="btn"></i>
+    </div>
+    <ul class="nav-list">
+
+      <li>
+        <a href="#">
+          <i class='bx bx-home-alt-2'></i>
+          <span class="link_name">Overview</span>
+        </a>
+        <span class="tooltip">Overview</span>
+      </li>
+      <li>
+        <a href="../function/light.html" class="sidebar-lightLink">
+          <i class='bx bx-brightness-half'></i>
+          <span class="link_name">Light</span>
+        </a>
+        <span class="tooltip">Light</span>
+      </li>
+      <li>
+        <a href="../function/fan.html" class="sidebar-fanLink">
+          <i class='bx bxs-radiation'></i>
+          <span class="link_name">Fan</span>
+        </a>
+        <span class="tooltip">Fan</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-user'></i>
+          <span class="link_name">User</span>
+        </a>
+        <span class="tooltip">User</span>
+      </li>
+      <li>
+        <a href="/function/setting.html">
+          <i class="bx bx-cog"></i>
+          <span class="link_name">Settings</span>
+        </a>
+        <span class="tooltip">Settings</span>
+      </li>
+      <li class="profile">
+        <div class="profile_details">
+          <img src="../image/profile.jpg" alt="profile image">
+          <div class="profile_content">
+            <div class="name">Anna Jhon</div>
+            <div class="designation">Admin</div>
+          </div>
+        </div>
+        <i class="bx bx-log-out" id="log_out"></i>
+      </li>
+  </div>
+</li>
+
+
+  </div>
+  <section class="home-section">
+    <div class="text">
+    </div>
+
+  </section>
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+  <script src="../function/js/ligth.js"></script>
+  <script src="../function/js/fan.js"></script>
+  <!-- <script>
+    $(document).ready(function () {
+      $('.sidebar-link').on('click', function (e) {
+        e.preventDefault(); // Prevent default link behavior
+
+        // Load light.html into the home section
+        $('.home-section .text').load($(this).attr('href'), function () {
+          // Code here will run after the content of light.html is loaded
+
+          const lightbulb = document.querySelector('.fa-lightbulb'); // Lightbulb icon
+          const toggleSwitch = document.querySelector('.switch input[type="checkbox"]');
+
+          if (toggleSwitch) {
+            toggleSwitch.addEventListener('change', function () {
+              if (this.checked) {
+                lightbulb.style.color = '#f1f50a'; // Change color to yellow
+              } else {
+                lightbulb.style.color = ''; // Revert to default color
+              }
+            });
+          } else {
+            console.error(".switch input[type='checkbox'] not found");
+          }
+        });
+      });
+    });
+  </script> -->
+  <script>
+    // Khi trang web được tải lần đầu, load trang HTML đầu tiên vào phần nội dung chính
+    document.querySelector('.text').innerHTML = '<object data="login.html"></object>';
+  </script>
+</body>
+
+</html>
